@@ -41,10 +41,8 @@ while True :
             "age" : age
             }
         
-        Student_data.append(add)
-        with open("students.json", "w") as file:
-                json.dump(Student_data, file,indent=4)
-        save_data()
+
+save_data()
           
 
     
