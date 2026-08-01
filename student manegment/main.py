@@ -23,6 +23,12 @@ while True :
         2 Show student list 
         3 delet student
         4 Exit
+
+
+
+
+
+        
     
     """)
     choose = int(input("Enter your option : "))
