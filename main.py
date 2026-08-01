@@ -1,8 +1,15 @@
+
+import os
 import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "database" / "students.json"
+
+
+
+
+
 
 if JSON_PATH.exists():
    with open(JSON_PATH, "r") as file:
@@ -14,22 +21,21 @@ else:
 
 def save_data():
     with open(JSON_PATH, "w") as file:
-        json.dump(Student_data, file,indent=4 )
+        json.dump(Student_data, file )
+
+
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
 
 while True :
+
+    clear_screen()
     print("""
        ======= Student Managment ====
         1 Add student 
         2 Show student list 
         3 delet student
-        4 Exit
-
-
-
-
-
-        
-    
+        4 Exit    
     """)
     choose = int(input("Enter your option : "))
 
@@ -42,8 +48,7 @@ while True :
             }
         
         Student_data.append(add)
-        with open("students.json", "w") as file:
-                json.dump(Student_data, file,indent=4)
+      
         save_data()
           
 
@@ -69,3 +74,12 @@ while True :
         break
 
 
+    else:
+        print("""============= Error 🚨==============
+        
+        
+        
+        
+=============== gozineh mad nazar dorost nist =============
+        """)
+        continue
