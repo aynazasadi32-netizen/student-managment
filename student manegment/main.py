@@ -14,7 +14,7 @@ else:
 
 def save_data():
     with open(JSON_PATH, "w") as file:
-        json.dump(Student_data, file)
+        json.dump(Student_data, file,indent=4 )
 
 while True :
     print("""
@@ -37,7 +37,7 @@ while True :
         
         Student_data.append(add)
         with open("students.json", "w") as file:
-                json.dump(Student_data, file, indent=4)
+                json.dump(Student_data, file,indent=4)
         save_data()
           
 
