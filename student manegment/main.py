@@ -4,12 +4,17 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "database" / "students.json"
 
-with open(JSON_PATH, "r") as file:
+if JSON_PATH.exists():
+   with open(JSON_PATH, "r") as file:
     Student_data = json.load(file)
+else:
+    Student_data = []
+
+
 
 def save_data():
     with open(JSON_PATH, "w") as file:
-        json.dump(Student_data, file, indent=4)
+        json.dump(Student_data, file)
 
 while True :
     print("""
