@@ -1,5 +1,6 @@
 
 import os
+import time
 import json
 from pathlib import Path
 
@@ -75,6 +76,7 @@ while True :
 
 
     else:
+        
         print("""============= Error 🚨==============
         
         
@@ -82,4 +84,5 @@ while True :
         
 =============== gozineh mad nazar dorost nist =============
         """)
+        time.sleep(3)
         continue
