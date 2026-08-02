@@ -29,12 +29,10 @@ def clear_screen():
 def ending_the_code():
    answer_input = input("do you want to back to the list of options??")
    if answer_input.upper() in ["YES", "BALE", "Y"]:
-               return True
-               clear_screen()
+        return True
    else:
-               print("Good Bye")
-               return False
-               breakpoint 
+    print("Good Bye😒")
+          
 
 
 #اصل کد
@@ -59,7 +57,8 @@ while True :
         
         Student_data.append(add)
         save_data()
-        ending_the_code()
+        if not ending_the_code():
+         break
         clear_screen()
 
     
@@ -68,17 +67,22 @@ while True :
          for i in Student_data:
              conter+=1
              print(f"{conter} : {i}") 
-         ending_the_code()
+         if not ending_the_code():
+          break
          clear_screen()    
 
         
     elif choose == 3 :
-        choose = int(input("which student : "))
+        conter = 0
+        for i in Student_data:
+            conter+=1
+            print(f"{conter} : {i}")   
+        choose = int(input("which student : "))     
         delete = Student_data[choose-1]
         Student_data.remove(delete)
-       
         save_data() 
-        ending_the_code()
+        if not ending_the_code():
+         break
         clear_screen()
     
     elif choose == 4:
