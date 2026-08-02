@@ -27,11 +27,12 @@ def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 def ending_the_code():
-   answer_input = input("do you want to back to the list of options??")
-   if answer_input.upper() in ["YES", "BALE", "Y"]:
+    answer_input = input("Do you want to go back to the list of options? ")
+
+    if answer_input.upper() in ["YES", "BALE", "Y"]:
         return True
-   else:
-    print("Good Bye😒")
+    else:
+        print("Good Bye😒")
           
 
 
@@ -58,17 +59,17 @@ while True :
         Student_data.append(add)
         save_data()
         if not ending_the_code():
-         break
+            break
         clear_screen()
 
     
     elif choose == 2 :
          conter = 0
-         for i in Student_data:
+         for student in Student_data:
              conter+=1
-             print(f"{conter} : {i}") 
+             print(f"{conter} : {student}") 
          if not ending_the_code():
-          break
+            break
          clear_screen()    
 
         
@@ -80,6 +81,8 @@ while True :
         choose = int(input("which student : "))     
         delete = Student_data[choose-1]
         Student_data.remove(delete)
+
+    
         save_data() 
         if not ending_the_code():
          break
