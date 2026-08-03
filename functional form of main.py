@@ -18,7 +18,7 @@ import time
 from tqdm import tqdm
 import json
 from pathlib import Path
-
+from tkinter import *
 
 #سیو اظلاعات توی فایل جیسون
 BASE_DIR = Path(__file__).resolve().parent
@@ -129,8 +129,5 @@ def main():
                 time.sleep(1)
                 continue
             clear_screen()
-
-
-
 main()
 
