@@ -48,6 +48,15 @@ class App(Tk):
 
         Button(
             self.frame,
+            text="start",
+            width=20,
+            command=self.show_add_form
+        ).pack(pady=5)
+
+
+
+        Button(
+            self.frame,
             text="Add Student",
             width=20,
             command=self.show_add_form
