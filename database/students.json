@@ -1,1 +1,30 @@
+<<<<<<< HEAD
+[
+    {
+        "name": "hamid",
+        "age": "18"
+    },
+    {
+        "name": "yasi",
+        "age": "23"
+    },
+    {
+        "name": "moino",
+        "age": "2"
+    },
+    {
+        "name": "esi",
+        "age": "45"
+    },
+    {
+        "name": "ali",
+        "age": "45"
+    },
+    {
+        "name": "mina",
+        "age": "2"
+    }
+]
+=======
 [{"name": "hamid", "age": "18"}, {"name": "yasi", "age": "23"}, {"name": "moino", "age": "2"}, {"name": "esi", "age": "45"}, {"name": "ali", "age": "45"}, {"name": "mina", "age": "2"}, {"name": "ana", "age": "53"}, {"name": "alo", "age": "2"}]
+>>>>>>> e97fd3bf6acb793c7646e89e8c562abea8029190

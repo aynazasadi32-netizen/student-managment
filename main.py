@@ -22,6 +22,8 @@ else:
 
 
 
+    
+#توابع (سیو،پاک کردن قبلی ها،پایان اجرا)
 def save_data():
     with open(JSON_PATH, "w") as file:
         json.dump(Student_data, file )
