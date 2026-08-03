@@ -17,6 +17,7 @@ else:
     Student_data = []
 
 
+    
 #توابع (سیو،پاک کردن قبلی ها،پایان اجرا)
 def save_data():
     with open(JSON_PATH, "w") as file:
