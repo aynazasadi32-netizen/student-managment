@@ -32,17 +32,23 @@ def save_data():
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
-while True :
+while True:
 
     clear_screen()
     print("""
        ======= Student Managment ====
-        1 Add student 
-        2 Show student list 
+        1 Add student
+        2 Show student list
         3 delet student
-        4 Exit    
+        4 Exit
     """)
-    choose = int(input("Enter your option : "))
+
+    try:
+        choose = int(input("Enter your option : "))
+    except ValueError:
+        print("Please enter a number")
+        time.sleep(2)
+        continue
 
     if choose == 1 :
         name = input("Enter student name : ")
@@ -59,20 +65,28 @@ while True :
 
     
     elif choose == 2 :
-         conter = 0
-         for i in Student_data:
-             conter+=1
-             print(f"{conter} : {i}") 
-        
              
-
-        
+        conter = 0
+        for i in Student_data:
+         conter+=1
+         print(f"{conter} : {i}") 
+        for i in tqdm(range(10)):
+         time.sleep(1)
+         print("this list will be disapeard after 10 second")
+              
+     
+             
     elif choose == 3 :
-        choose = int(input("which student : "))
-        delete = Student_data[choose-1]
-        Student_data.remove(delete)
-       
-        save_data()            
+        try:
+            choose = int(input("which student : "))
+            delete = Student_data[choose-1]
+            Student_data.remove(delete)
+            save_data()
+        except:
+            print("Invalid student number. try again after 3 second")
+            for i in tqdm(range(3)):
+                time.sleep(1)
+                    
     
     
     elif choose == 4:
