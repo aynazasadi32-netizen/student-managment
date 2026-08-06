@@ -46,13 +46,6 @@ class App(Tk):
         self.frame = Frame(self)
         self.frame.pack()
 
-        Button(
-            self.frame,
-            text="start",
-            width=20,
-            command=self.show_add_form
-        ).pack(pady=5)
-
 
 
         Button(
