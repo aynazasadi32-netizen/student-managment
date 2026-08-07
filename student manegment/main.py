@@ -1,6 +1,5 @@
 import time
 from tqdm import tqdm
-
 from utils import clear_screen
 from processes.process import process_choice
 from show_menu import show_menu
@@ -18,7 +17,7 @@ def main():
             clear_screen()
 
         except:
-            print("""============= Error 🚨==============
+            print("""      ============= Error 🚨==============
                     
                        =====just enter a number between 1_4=====
                     
