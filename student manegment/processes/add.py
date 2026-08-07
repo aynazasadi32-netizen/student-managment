@@ -1,4 +1,4 @@
-from database.save_load import Student_data, save_data
+from save_load import Student_data, save_data
 
 
 def add_student():
