@@ -47,3 +47,19 @@ student_management/
 │   └── helper.py
 │
 └── README.md
+
+
+
+project/
+├── main.py
+├── show_menu.py
+├── save_load.py
+├── utils.py
+├── database/
+│   └── students.json
+└── process_choices/
+    ├── __init__.py
+    ├── process_choice.py
+    ├── add_student.py
+    ├── show_students.py
+    └── delete_student.py
