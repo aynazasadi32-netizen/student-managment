@@ -1,9 +1,8 @@
 import time
 from tqdm import tqdm
-
-from add import add_student
-from show import show_students
-from delete import delete_student
+from processes.add import add_student
+from processes.show import show_students
+from processes.delete import delete_student
 
 
 def process_choice(choice):

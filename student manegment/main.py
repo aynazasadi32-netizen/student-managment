@@ -1,21 +1,9 @@
-def show_menu():
-    print("""
-    ======= Student Management ======
-    1. Add student
-    2. Show student list
-    3. Delete student
-    4. Exit
-    """)
-
-
-
 import time
 from tqdm import tqdm
 
-from show import show_menu
 from utils import clear_screen
-from process import process_choice
-
+from processes.process import process_choice
+from show_menu import show_menu
 
 def main():
     while True:

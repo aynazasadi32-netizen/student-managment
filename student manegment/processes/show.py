@@ -1,6 +1,6 @@
 import time
 from tqdm import tqdm
-from database.save_load import Student_data
+from save_load import Student_data
 
 
 def show_students():
